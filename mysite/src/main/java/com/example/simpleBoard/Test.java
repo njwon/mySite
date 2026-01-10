@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.simpleBoard;
 
 public class Test {
 	private String Square;
