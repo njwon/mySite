@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -36,8 +37,13 @@ public class QuestionController {
 	}
 	
 	@GetMapping("/create")
+	public String loadCreateForm() {
+		return "question_form";
+	}
+	
+	@PostMapping("/create")
 	public String questionCreate() {
 		// 질문 저장 숙제
-		return "question_form";
+		return "redirect";
 	}
 }
